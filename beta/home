@@ -2,9 +2,9 @@
 <html lang="tr-en">
     <head>
         <title>xalieren.xyz</title>
-        <link rel="icon" href="./favicon/fav.ico">
+        <link rel="icon" href="../favicon/fav.ico">
 
-        <link rel="stylesheet" href="./css/main.css" type="text/css">
+        <link rel="stylesheet" href="../css/main.css" type="text/css">
         <meta charset="UTF-8">
 
         <meta name="theme-color" content="#F0000">
