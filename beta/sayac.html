@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="TR">
+    <head>
+        <title>xalieren.xyz | beta | sayac.html</title>
+
+        <script src="./ok.js"></script>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-image: url('https://abload.de/img/nature_gf_png_nisanbor6qyg.gif');
+                background-size: cover;
+                backface-visibility: visible;
+            }
+
+            #sayac {
+                text-align: center;
+                padding: 50px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 100px;
+            }
+
+            .copyright {
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 50px;
+                color: white;
+            }
+
+            .loader-wrapper {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #242f3f;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+           }
+           .loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+        </style>
+    </head>
+    <body>
+        <p id="sayac"></p>
+
+        <div class="copyright">
+            <p>&copy; xalieren.xyz | cehennemden kurtulma sayacı</p>
+        </div>
+
+        <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+        <script>
+            $(window).on("load", function(){
+                $(".loader-wrapper").fadeOut("slow");
+            });
+        </script>
+
+        <script>
+            var countDownDate = new Date("Jun 14, 2024 15:37:25").getTime();
+            
+            var x = setInterval(function() {
+            
+              var now = new Date().getTime();
+            
+              var distance = countDownDate - now;
+            
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+              document.getElementById("sayac").innerHTML = days + "g " + hours + "s "
+              + minutes + "d " + seconds + "sn ";
+            
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("sayac").innerHTML = "CEHENNEMDEN BASARIYLA KURTULDUK!!! 2024-2025 DONEMI YAKINDA";
+              }
+            }, 1000);
+        </script>
+    </body>
+</html>
